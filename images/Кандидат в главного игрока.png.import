@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Кандидат в главного игрока.png-269a0e6e0b8bb31f3660304f62e08a88.stex"
+
+[deps]
+
+source_file="res://images/Кандидат в главного игрока.png"
+source_md5="9015395a7eb869b5909a7b9139dcdc48"
+
+dest_files=[ "res://.import/Кандидат в главного игрока.png-269a0e6e0b8bb31f3660304f62e08a88.stex" ]
+dest_md5="161ce2a76dd21685a26156633736bfcf"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
