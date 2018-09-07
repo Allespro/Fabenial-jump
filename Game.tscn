@@ -7,26 +7,32 @@
 [ext_resource path="res://FlyingObjects.gd" type="Script" id=5]
 [ext_resource path="res://images/planet2.png" type="Texture" id=6]
 [ext_resource path="res://images/SpaceMan.png" type="Texture" id=7]
-[ext_resource path="res://planks.gd" type="Script" id=8]
-[ext_resource path="res://fonts/11814.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://images/ouch!.png" type="Texture" id=10]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://StartPlank.gd" type="Script" id=12]
-[ext_resource path="res://images/plank2.png" type="Texture" id=13]
-[ext_resource path="res://StartButton.gd" type="Script" id=14]
-[ext_resource path="res://sounds/bag_raiders_starting.ogg" type="AudioStream" id=15]
-[ext_resource path="res://images/стрелка.png" type="Texture" id=16]
-[ext_resource path="res://StartScreen.tscn" type="PackedScene" id=17]
-[ext_resource path="res://fonts/Font_theme.tres" type="Theme" id=18]
-[ext_resource path="res://images/pausa.png" type="Texture" id=19]
-[ext_resource path="res://sounds/bag_raiders2.ogg" type="AudioStream" id=20]
+[ext_resource path="res://fonts/11814.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://images/ouch!.png" type="Texture" id=9]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://StartPlank.gd" type="Script" id=11]
+[ext_resource path="res://images/plank2.png" type="Texture" id=12]
+[ext_resource path="res://StartButton.gd" type="Script" id=13]
+[ext_resource path="res://sounds/bag_raiders_starting.ogg" type="AudioStream" id=14]
+[ext_resource path="res://images/стрелка.png" type="Texture" id=15]
+[ext_resource path="res://StartScreen.tscn" type="PackedScene" id=16]
+[ext_resource path="res://fonts/Font_theme.tres" type="Theme" id=17]
+[ext_resource path="res://images/pausa.png" type="Texture" id=18]
+[ext_resource path="res://sounds/bag_raiders2.ogg" type="AudioStream" id=19]
+
+[sub_resource type="GDScript" id=9]
+
+script/source = "extends Node2D
+
+func _physics_process(delta):
+	"
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 55
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -34,7 +40,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 55
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="InputEventAction" id=3]
@@ -57,7 +63,7 @@ extents = Vector2( 54.238, 11.0417 )
 size = 60
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="Animation" id=7]
@@ -162,33 +168,33 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Saturn1" type="Sprite" parent="Images/Saturns" index="0"]
 
-position = Vector2( 156.704, 1338.79 )
+position = Vector2( 193.589, 1352.89 )
 rotation = -2.10213
-scale = Vector2( 0.235167, 0.234957 )
+scale = Vector2( 0.54363, 0.543145 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
 [node name="Saturn2" type="Sprite" parent="Images/Saturns" index="1"]
 
-position = Vector2( -61.4323, 609.234 )
+position = Vector2( -66.9909, 565.749 )
 rotation = -1.02363
-scale = Vector2( 0.235167, 0.234957 )
+scale = Vector2( 0.577609, 0.577093 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
 [node name="Saturn3" type="Sprite" parent="Images/Saturns" index="2"]
 
-position = Vector2( 675.592, -85.3186 )
+position = Vector2( 731.852, -105.812 )
 rotation = -1.02363
-scale = Vector2( 0.235167, 0.234957 )
+scale = Vector2( 0.702885, 0.702257 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
 [node name="Saturn4" type="Sprite" parent="Images/Saturns" index="3"]
 
-position = Vector2( 785.503, 905.538 )
+position = Vector2( 792.675, 958.566 )
 rotation = -1.07835
-scale = Vector2( -0.26359, 0.238666 )
+scale = Vector2( -0.696952, 0.631051 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
@@ -200,25 +206,25 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="PinkPlanet1" type="Sprite" parent="Images/PinkPlanets" index="0"]
 
-position = Vector2( 424.873, 1335.32 )
+position = Vector2( 408.25, 1338.48 )
 rotation = -2.59707
-scale = Vector2( 0.149695, 0.143125 )
+scale = Vector2( 0.275541, 0.263448 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
 
 [node name="PinkPlanet2" type="Sprite" parent="Images/PinkPlanets" index="1"]
 
-position = Vector2( -76.3177, 96.6658 )
+position = Vector2( -87.1295, 61.6481 )
 rotation = -2.59707
-scale = Vector2( 0.149695, 0.143125 )
+scale = Vector2( 0.423572, 0.404981 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
 
 [node name="PinkPlanet3" type="Sprite" parent="Images/PinkPlanets" index="2"]
 
-position = Vector2( 778.383, 499.684 )
+position = Vector2( 823.118, 491.438 )
 rotation = -2.59707
-scale = Vector2( 0.149695, 0.143125 )
+scale = Vector2( 0.48963, 0.468141 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
 
@@ -230,95 +236,95 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Cosmonaut1" type="Sprite" parent="Images/Cosmonauts" index="0"]
 
-position = Vector2( 790.097, 284.039 )
+position = Vector2( 766.575, 268.403 )
 rotation = 4.7733
-scale = Vector2( 0.0531097, 0.0495787 )
+scale = Vector2( 0.271194, 0.253164 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut2" type="Sprite" parent="Images/Cosmonauts" index="1"]
 
-position = Vector2( -49.5469, 389.804 )
+position = Vector2( -62.1716, 375.348 )
 rotation = 2.94949
-scale = Vector2( 0.0531097, 0.0495787 )
+scale = Vector2( 0.201302, 0.187918 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut3" type="Sprite" parent="Images/Cosmonauts" index="2"]
 
-position = Vector2( 751.481, 1116.44 )
+position = Vector2( 757.32, 1087.61 )
 rotation = 5.94626
-scale = Vector2( -0.054459, 0.0495787 )
+scale = Vector2( -0.285872, 0.260253 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut4" type="Sprite" parent="Images/Cosmonauts" index="3"]
 
-position = Vector2( 774.988, 12.0718 )
+position = Vector2( 798.853, 23.9729 )
 rotation = 2.55916
-scale = Vector2( 0.0531097, 0.0495787 )
+scale = Vector2( 0.259015, 0.241794 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut5" type="Sprite" parent="Images/Cosmonauts" index="4"]
 
-position = Vector2( -49.5469, 1328.74 )
+position = Vector2( -50.2935, 1301.46 )
 rotation = 3.64
-scale = Vector2( 0.0531097, 0.0495787 )
+scale = Vector2( 0.263827, 0.246287 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut6" type="Sprite" parent="Images/Cosmonauts" index="5"]
 
-position = Vector2( 652.449, 1320.16 )
+position = Vector2( 671.206, 1335.81 )
 rotation = 3.64
-scale = Vector2( 0.0531097, 0.0495787 )
+scale = Vector2( 0.339603, 0.317024 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut7" type="Sprite" parent="Images/Cosmonauts" index="6"]
 
-position = Vector2( 752.396, 711.402 )
+position = Vector2( 770.528, 665.429 )
 rotation = 3.01009
-scale = Vector2( -0.05086, 0.0495787 )
+scale = Vector2( -0.420151, 0.409566 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut8" type="Sprite" parent="Images/Cosmonauts" index="7"]
 
-position = Vector2( -101.499, 838.113 )
+position = Vector2( -98.5245, 788.628 )
 rotation = 2.68304
-scale = Vector2( -0.0500759, 0.0475292 )
+scale = Vector2( -0.428102, 0.40633 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut9" type="Sprite" parent="Images/Cosmonauts" index="8"]
 
-position = Vector2( 164.682, -49.1259 )
+position = Vector2( 212.391, -40.9788 )
 rotation = 1.23784
-scale = Vector2( -0.0502521, 0.0495787 )
+scale = Vector2( -0.408602, 0.403126 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut10" type="Sprite" parent="Images/Cosmonauts" index="9"]
 
-position = Vector2( 519.421, -49.1494 )
+position = Vector2( 477.609, -75.1601 )
 rotation = 2.62009
-scale = Vector2( -0.0491501, 0.0495787 )
+scale = Vector2( -0.407552, 0.411106 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="Cosmonaut11" type="Sprite" parent="Images/Cosmonauts" index="10"]
 
-position = Vector2( -32.2792, -18.0304 )
+position = Vector2( -23.4332, -23.2058 )
 rotation = 3.64
-scale = Vector2( 0.0531097, 0.0495787 )
+scale = Vector2( 0.336929, 0.314528 )
 texture = ExtResource( 7 )
 script = ExtResource( 5 )
 
 [node name="planks" type="Node2D" parent="." index="2"]
 
-script = ExtResource( 8 )
+script = SubResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -514,9 +520,9 @@ _sections_unfolded = [ "Pause" ]
 
 position = Vector2( 394.567, 1002.68 )
 scale = Vector2( 0.527663, 0.51903 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
-[node name="Player" parent="." index="4" instance=ExtResource( 11 )]
+[node name="Player" parent="." index="4" instance=ExtResource( 10 )]
 
 position = Vector2( 342.889, 1055.52 )
 
@@ -531,7 +537,7 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script = ExtResource( 12 )
+script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartPlank" index="0"]
 
@@ -541,10 +547,11 @@ shape = SubResource( 5 )
 [node name="Sprite" type="Sprite" parent="StartPlank" index="1"]
 
 position = Vector2( 328.73, 880.725 )
-texture = ExtResource( 13 )
+texture = ExtResource( 12 )
 
 [node name="Start_screen" type="Control" parent="." index="6"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -629,12 +636,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-script = ExtResource( 14 )
+script = ExtResource( 13 )
 _sections_unfolded = [ "Pause" ]
 
 [node name="Start_music" type="AudioStreamPlayer" parent="Start_screen/ColorRect/StartButton" index="0"]
 
-stream = ExtResource( 15 )
+stream = ExtResource( 14 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -655,14 +662,14 @@ blend_times = [  ]
 position = Vector2( 603.427, 985.977 )
 rotation = 2.19441
 scale = Vector2( 0.478179, 0.433263 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="arrow2" type="Sprite" parent="Start_screen/ColorRect" index="3"]
 
 position = Vector2( 130.86, 986.999 )
 rotation = 1.1005
 scale = Vector2( 0.478179, -0.45483 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="LoadingScreen" type="Control" parent="." index="7"]
 
@@ -699,7 +706,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 0, 0, 0, 1 )
 
-[node name="Loading_screen" parent="LoadingScreen/Loading_screen" index="0" instance=ExtResource( 17 )]
+[node name="Loading_screen" parent="LoadingScreen/Loading_screen" index="0" instance=ExtResource( 16 )]
 
 pause_mode = 2
 margin_left = -12.0
@@ -772,7 +779,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 18 )
+theme = ExtResource( 17 )
 text = "SCORE: "
 percent_visible = 1.0
 lines_skipped = 0
@@ -809,7 +816,7 @@ _sections_unfolded = [ "Textures" ]
 
 position = Vector2( 25.943, 28.057 )
 scale = Vector2( 0.103721, 0.105058 )
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 
 [node name="Pause_screen" type="Control" parent="." index="10"]
 
@@ -945,16 +952,10 @@ shortcut = null
 group = null
 _sections_unfolded = [ "Pause" ]
 
-[node name="Sprite" type="Sprite" parent="Pause_screen/ColorRect" index="2"]
-
-position = Vector2( 394.567, 1002.68 )
-scale = Vector2( 0.527663, 0.51903 )
-texture = ExtResource( 10 )
-
 [node name="GameMusic" type="AudioStreamPlayer" parent="." index="11"]
 
 editor/display_folded = true
-stream = ExtResource( 20 )
+stream = ExtResource( 19 )
 volume_db = 0.0
 autoplay = false
 mix_target = 2

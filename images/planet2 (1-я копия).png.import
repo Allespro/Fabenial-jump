@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/planet2 (1-я копия).png-45f3c6094d30069e2262203de1b28a5f.stex"
+
+[deps]
+
+source_file="res://images/planet2 (1-я копия).png"
+source_md5="181546feee6919ed3b2dc2ee4b9d0d45"
+
+dest_files=[ "res://.import/planet2 (1-я копия).png-45f3c6094d30069e2262203de1b28a5f.stex" ]
+dest_md5="195347b0652ff6d2e644237a1c4519a2"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

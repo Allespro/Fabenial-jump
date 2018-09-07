@@ -10,7 +10,7 @@ source_file="res://images/PlankAnim/8.png"
 source_md5="9578c32771b4e82ae19e500d0843e76d"
 
 dest_files=[ "res://.import/8.png-7c177523d1add04641cdb718f16326dd.stex" ]
-dest_md5="b862118daa762eb72b11d4e5b3026626"
+dest_md5="a04cc4d998e75d6ffd8c89d4011349c3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

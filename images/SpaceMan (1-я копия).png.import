@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/SpaceMan (1-я копия).png-52575806c0fc41bba5a810f53e8db1e9.stex"
+
+[deps]
+
+source_file="res://images/SpaceMan (1-я копия).png"
+source_md5="c5d09148a16e6905ab06e5b9187ea476"
+
+dest_files=[ "res://.import/SpaceMan (1-я копия).png-52575806c0fc41bba5a810f53e8db1e9.stex" ]
+dest_md5="035fc422d6e01f551dfd3ac46bf86b56"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

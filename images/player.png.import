@@ -7,10 +7,10 @@ path="res://.import/player.png-163753890810fa89776ed0f872fd9df1.stex"
 [deps]
 
 source_file="res://images/player.png"
-source_md5="b3a1020353f3344f37a18160c9ca2ed2"
+source_md5="43a952bb21ddcaf541b2024c500b1465"
 
 dest_files=[ "res://.import/player.png-163753890810fa89776ed0f872fd9df1.stex" ]
-dest_md5="13586a9d65b141722631b1f8b8e00245"
+dest_md5="64fb80a9dca5d529c080e09a90954d8d"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

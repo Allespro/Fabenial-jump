@@ -55,7 +55,7 @@ func _physics_process(delta):
 		randomize()
 		plank.position.y = screenW - rand_range(1280, 1380)
 		randomize()
-		plank.position.x = rand_range(10, 700)
+		plank.position.x = rand_range(30, 690)
 		$planks.add_child(plank)
 		score += 1
 		if (score == 33):
