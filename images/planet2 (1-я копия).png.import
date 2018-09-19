@@ -7,10 +7,7 @@ path="res://.import/planet2 (1-я копия).png-45f3c6094d30069e2262203de1b28a
 [deps]
 
 source_file="res://images/planet2 (1-я копия).png"
-source_md5="181546feee6919ed3b2dc2ee4b9d0d45"
-
 dest_files=[ "res://.import/planet2 (1-я копия).png-45f3c6094d30069e2262203de1b28a5f.stex" ]
-dest_md5="195347b0652ff6d2e644237a1c4519a2"
 
 [params]
 

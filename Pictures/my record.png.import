@@ -7,10 +7,7 @@ path="res://.import/my record.png-0973627cd2857b47f965e5ec9b86577e.stex"
 [deps]
 
 source_file="res://Pictures/my record.png"
-source_md5="c1a33b920f90c3e81bee872bb4b63a74"
-
 dest_files=[ "res://.import/my record.png-0973627cd2857b47f965e5ec9b86577e.stex" ]
-dest_md5="e23f833b30ffcacbb39832fe15d9ed20"
 
 [params]
 

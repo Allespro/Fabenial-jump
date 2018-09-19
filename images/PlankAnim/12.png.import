@@ -7,10 +7,7 @@ path="res://.import/12.png-823d9f0a1de6e0ce8f9586009bcfdb2e.stex"
 [deps]
 
 source_file="res://images/PlankAnim/12.png"
-source_md5="996217e62b9be656641f27e2c101c66e"
-
 dest_files=[ "res://.import/12.png-823d9f0a1de6e0ce8f9586009bcfdb2e.stex" ]
-dest_md5="0e4700d2b09cdc5def7d6d79cca56f67"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/SpaceMan (1-я копия).png-52575806c0fc41bba5a810f53e8db
 [deps]
 
 source_file="res://images/SpaceMan (1-я копия).png"
-source_md5="c5d09148a16e6905ab06e5b9187ea476"
-
 dest_files=[ "res://.import/SpaceMan (1-я копия).png-52575806c0fc41bba5a810f53e8db1e9.stex" ]
-dest_md5="035fc422d6e01f551dfd3ac46bf86b56"
 
 [params]
 

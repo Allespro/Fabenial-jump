@@ -6,6 +6,7 @@ var POSY = 1
 var ROT = 0.01
 var START_POSITON
 
+
 func _ready():
 	START_POSITON = position
 	randomize()
@@ -14,6 +15,8 @@ func _ready():
 	POSY = rand_range(1, 2)
 
 func _physics_process(delta):
+
+
 	if ($"../../../".score > 32):
 		if position.x > 800:
 			POSX = -POSX
@@ -28,4 +31,6 @@ func _physics_process(delta):
 		rotation += ROT
 	if ($"../../../".GAME == false):
 		position = START_POSITON
+		scale.x = 0
+		scale.y = 0
 	

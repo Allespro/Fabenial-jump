@@ -7,10 +7,7 @@ path="res://.import/bag_raiders2.ogg-3faead5142778d8f875c10a916c81675.oggstr"
 [deps]
 
 source_file="res://sounds/bag_raiders2.ogg"
-source_md5="ccc0b343264a34cc4623d6c74158035c"
-
 dest_files=[ "res://.import/bag_raiders2.ogg-3faead5142778d8f875c10a916c81675.oggstr" ]
-dest_md5="88e1257a00d5fcc6644c69d781f4261f"
 
 [params]
 

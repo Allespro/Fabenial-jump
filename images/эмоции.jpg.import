@@ -7,10 +7,7 @@ path="res://.import/эмоции.jpg-7f03ebc4039807f48410dd64ecec0e2d.stex"
 [deps]
 
 source_file="res://images/эмоции.jpg"
-source_md5="ed7e1f6c337096de675767c7caa63b7a"
-
 dest_files=[ "res://.import/эмоции.jpg-7f03ebc4039807f48410dd64ecec0e2d.stex" ]
-dest_md5="a30ed111d0b98fda5c9cce6a29b1064c"
 
 [params]
 

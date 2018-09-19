@@ -7,10 +7,7 @@ path="res://.import/LoadingScreen.ogv-bd78e184c944ccd791ea7c7f0d48575c.ogvstr"
 [deps]
 
 source_file="res://LoadingScreen.ogv"
-source_md5="88ba9c51035689879301f06776d9e38a"
-
 dest_files=[ "res://.import/LoadingScreen.ogv-bd78e184c944ccd791ea7c7f0d48575c.ogvstr" ]
-dest_md5="515ce0ca4a27998112020c4e66b10a69"
 
 [params]
 

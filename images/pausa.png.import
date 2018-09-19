@@ -7,10 +7,7 @@ path="res://.import/pausa.png-382ab1e7c9ca0cb15666e116708f7cea.stex"
 [deps]
 
 source_file="res://images/pausa.png"
-source_md5="c8ec084ea840ee0156e7e8be32949934"
-
 dest_files=[ "res://.import/pausa.png-382ab1e7c9ca0cb15666e116708f7cea.stex" ]
-dest_md5="8debe8ce723df00862f27e0e501ef7a3"
 
 [params]
 

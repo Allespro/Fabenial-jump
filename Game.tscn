@@ -20,20 +20,12 @@
 [ext_resource path="res://images/pausa.png" type="Texture" id=18]
 [ext_resource path="res://sounds/bag_raiders2.ogg" type="AudioStream" id=19]
 
-[sub_resource type="GDScript" id=9]
+[sub_resource type="GDScript" id=1]
 
 script/source = "extends Node2D
 
 func _physics_process(delta):
 	"
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 55
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 8 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
 
@@ -43,22 +35,30 @@ use_filter = false
 font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="InputEventAction" id=3]
+[sub_resource type="DynamicFont" id=3]
+
+size = 55
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="InputEventAction" id=4]
 
 device = 0
 action = "ui_accept"
 pressed = false
 
-[sub_resource type="ShortCut" id=4]
+[sub_resource type="ShortCut" id=5]
 
-shortcut = SubResource( 3 )
+shortcut = SubResource( 4 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 54.238, 11.0417 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 
 size = 60
 use_mipmaps = false
@@ -66,7 +66,7 @@ use_filter = false
 font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 
 length = 23.0
 loop = false
@@ -89,7 +89,7 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 
 length = 15.0
 loop = false
@@ -118,11 +118,9 @@ script = ExtResource( 1 )
 
 [node name="Background" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
-
 [node name="background_image" type="Sprite" parent="Background" index="0"]
 
-position = Vector2( -0.857361, 0 )
+position = Vector2( 0, -5 )
 texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset", "Transform" ]
@@ -143,7 +141,6 @@ __meta__ = {
 [node name="Images" type="Node2D" parent="." index="1"]
 
 pause_mode = 2
-editor/display_folded = true
 _sections_unfolded = [ "Pause" ]
 
 [node name="SpaceShips" type="Node2D" parent="Images" index="0"]
@@ -163,7 +160,6 @@ texture = ExtResource( 3 )
 [node name="Saturns" type="Node2D" parent="Images" index="1"]
 
 pause_mode = 2
-editor/display_folded = true
 _sections_unfolded = [ "Pause" ]
 
 [node name="Saturn1" type="Sprite" parent="Images/Saturns" index="0"]
@@ -324,10 +320,7 @@ script = ExtResource( 5 )
 
 [node name="planks" type="Node2D" parent="." index="2"]
 
-script = SubResource( 9 )
-__meta__ = {
-"_edit_lock_": true
-}
+script = SubResource( 1 )
 
 [node name="End_screen" type="Control" parent="." index="3"]
 
@@ -380,7 +373,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Твой счёт:"
@@ -405,7 +398,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Твой рекорд:"
@@ -430,7 +423,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Заново"
@@ -459,7 +452,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 4 )
+shortcut = SubResource( 5 )
 group = null
 _sections_unfolded = [ "Pause", "Textures" ]
 __meta__ = {
@@ -483,7 +476,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Выйти"
@@ -542,7 +535,7 @@ script = ExtResource( 11 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartPlank" index="0"]
 
 position = Vector2( 329.354, 880.663 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="StartPlank" index="1"]
 
@@ -564,9 +557,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="ColorRect" type="ColorRect" parent="Start_screen" index="0"]
 
@@ -605,7 +595,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Нажми на него"
@@ -643,6 +633,7 @@ _sections_unfolded = [ "Pause" ]
 
 stream = ExtResource( 14 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
@@ -654,7 +645,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/soundstart = SubResource( 7 )
+anims/soundstart = SubResource( 8 )
 blend_times = [  ]
 
 [node name="arrow" type="Sprite" parent="Start_screen/ColorRect" index="2"]
@@ -759,9 +750,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="score" type="Label" parent="GUI" index="0"]
 
@@ -869,7 +857,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Продолжить"
@@ -898,7 +886,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 2
-shortcut = SubResource( 4 )
+shortcut = SubResource( 5 )
 group = null
 _sections_unfolded = [ "Pause", "Textures" ]
 
@@ -919,7 +907,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Выйти"
@@ -957,6 +945,7 @@ _sections_unfolded = [ "Pause" ]
 editor/display_folded = true
 stream = ExtResource( 19 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 2
 bus = "Master"
@@ -969,7 +958,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/GameSound = SubResource( 8 )
+anims/GameSound = SubResource( 9 )
 blend_times = [  ]
 
 [connection signal="pressed" from="End_screen/ColorRect/Retry_label/Retry" to="." method="_on_Retry_pressed"]
