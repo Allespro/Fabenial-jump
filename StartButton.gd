@@ -1,3 +1,4 @@
+# START BUTTON SCRIPT
 extends TextureButton
 
 var arrpos = 0
