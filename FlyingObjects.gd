@@ -8,6 +8,7 @@ var START_POSITON
 
 
 func _ready():
+	#************set rotation speed************
 	START_POSITON = position
 	randomize()
 	ROT = rand_range(-0.02, 0.02)
@@ -16,7 +17,7 @@ func _ready():
 
 func _physics_process(delta):
 
-
+	#************rotation************
 	if ($"../../../".score > 32):
 		if position.x > 800:
 			POSX = -POSX
