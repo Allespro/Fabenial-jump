@@ -1,3 +1,5 @@
+# NON USED FILE. JUST EXAMPLE
+
 extends RigidBody2D
 
 # Default Character Properties (Should be overwritten)
