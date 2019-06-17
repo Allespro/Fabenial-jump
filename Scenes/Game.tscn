@@ -1,0 +1,1286 @@
+[gd_scene load_steps=138 format=2]
+
+[ext_resource path="res://Script/Game.gd" type="Script" id=1]
+[ext_resource path="res://Images/Back/back.jpg" type="Texture" id=2]
+[ext_resource path="res://Images/FlyObj/planet1.png" type="Texture" id=3]
+[ext_resource path="res://Script/FlyingObjects.gd" type="Script" id=4]
+[ext_resource path="res://Images/FlyObj/planet2.png" type="Texture" id=5]
+[ext_resource path="res://Images/FlyObj/SpaceMan-small.png" type="Texture" id=6]
+[ext_resource path="res://Images/FlyObj/SpaceMan2.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/NYAN_CAT.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/NYAN_CAT.gd" type="Script" id=9]
+[ext_resource path="res://Script/MainPlank.gd" type="Script" id=10]
+[ext_resource path="res://Images/MainPlank/plank.png" type="Texture" id=11]
+[ext_resource path="res://Script/New_version.gd" type="Script" id=12]
+[ext_resource path="res://Script/StartButton.gd" type="Script" id=13]
+[ext_resource path="res://Music/bag_raiders_starting.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Images/UI/Arrow.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Script/End_screen.gd" type="Script" id=17]
+[ext_resource path="res://Images/UI/NewRecorgAnim/1.png" type="Texture" id=18]
+[ext_resource path="res://Images/UI/NewRecorgAnim/2.png" type="Texture" id=19]
+[ext_resource path="res://Images/UI/NewRecorgAnim/3.png" type="Texture" id=20]
+[ext_resource path="res://Images/UI/NewRecorgAnim/4.png" type="Texture" id=21]
+[ext_resource path="res://Images/UI/NewRecorgAnim/5.png" type="Texture" id=22]
+[ext_resource path="res://Images/UI/NewRecorgAnim/6.png" type="Texture" id=23]
+[ext_resource path="res://Images/UI/NewRecorgAnim/7.png" type="Texture" id=24]
+[ext_resource path="res://Images/UI/NewRecorgAnim/8.png" type="Texture" id=25]
+[ext_resource path="res://Images/UI/NewRecorgAnim/9.png" type="Texture" id=26]
+[ext_resource path="res://Images/UI/NewRecorgAnim/10.png" type="Texture" id=27]
+[ext_resource path="res://Images/UI/NewRecorgAnim/11.png" type="Texture" id=28]
+[ext_resource path="res://Images/UI/NewRecorgAnim/12.png" type="Texture" id=29]
+[ext_resource path="res://Images/UI/NewRecorgAnim/13.png" type="Texture" id=30]
+[ext_resource path="res://Images/UI/NewRecorgAnim/14.png" type="Texture" id=31]
+[ext_resource path="res://Images/UI/NewRecorgAnim/15.png" type="Texture" id=32]
+[ext_resource path="res://Images/UI/NewRecorgAnim/16.png" type="Texture" id=33]
+[ext_resource path="res://Images/UI/NewRecorgAnim/17.png" type="Texture" id=34]
+[ext_resource path="res://Images/UI/NewRecorgAnim/18.png" type="Texture" id=35]
+[ext_resource path="res://Images/UI/NewRecorgAnim/19.png" type="Texture" id=36]
+[ext_resource path="res://Images/UI/NewRecorgAnim/20.png" type="Texture" id=37]
+[ext_resource path="res://Images/UI/NewRecorgAnim/21.png" type="Texture" id=38]
+[ext_resource path="res://Images/UI/NewRecorgAnim/22.png" type="Texture" id=39]
+[ext_resource path="res://Images/UI/NewRecorgAnim/23.png" type="Texture" id=40]
+[ext_resource path="res://Images/UI/NewRecorgAnim/24.png" type="Texture" id=41]
+[ext_resource path="res://Images/UI/NewRecorgAnim/25.png" type="Texture" id=42]
+[ext_resource path="res://Images/UI/NewRecorgAnim/26.png" type="Texture" id=43]
+[ext_resource path="res://Images/UI/NewRecorgAnim/27.png" type="Texture" id=44]
+[ext_resource path="res://Images/UI/NewRecorgAnim/28.png" type="Texture" id=45]
+[ext_resource path="res://Images/UI/NewRecorgAnim/29.png" type="Texture" id=46]
+[ext_resource path="res://Images/UI/NewRecorgAnim/30.png" type="Texture" id=47]
+[ext_resource path="res://Images/UI/NewRecorgAnim/31.png" type="Texture" id=48]
+[ext_resource path="res://Images/UI/NewRecorgAnim/32.png" type="Texture" id=49]
+[ext_resource path="res://Images/UI/NewRecorgAnim/33.png" type="Texture" id=50]
+[ext_resource path="res://Images/UI/NewRecorgAnim/34.png" type="Texture" id=51]
+[ext_resource path="res://Images/UI/NewRecorgAnim/35.png" type="Texture" id=52]
+[ext_resource path="res://Images/UI/NewRecorgAnim/36.png" type="Texture" id=53]
+[ext_resource path="res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf" type="DynamicFontData" id=54]
+[ext_resource path="res://Images/UI/pausa.png" type="Texture" id=55]
+[ext_resource path="res://Script/RightTouchButt.gd" type="Script" id=56]
+[ext_resource path="res://Script/LeftTouchButt.gd" type="Script" id=57]
+[ext_resource path="res://Images/UI/TouchHintAnim/1.png" type="Texture" id=58]
+[ext_resource path="res://Images/UI/TouchHintAnim/2.png" type="Texture" id=59]
+[ext_resource path="res://Images/UI/TouchHintAnim/3.png" type="Texture" id=60]
+[ext_resource path="res://Images/UI/TouchHintAnim/4.png" type="Texture" id=61]
+[ext_resource path="res://Images/UI/TouchHintAnim/5.png" type="Texture" id=62]
+[ext_resource path="res://Images/UI/TouchHintAnim/6.png" type="Texture" id=63]
+[ext_resource path="res://Images/UI/TouchHintAnim/7.png" type="Texture" id=64]
+[ext_resource path="res://Images/UI/TouchHintAnim/8.png" type="Texture" id=65]
+[ext_resource path="res://Images/UI/TouchHintAnim/9.png" type="Texture" id=66]
+[ext_resource path="res://Images/UI/TouchHintAnim/10.png" type="Texture" id=67]
+[ext_resource path="res://Images/UI/NewRecord.png" type="Texture" id=68]
+[ext_resource path="res://Images/Player/NoLifes.png" type="Texture" id=69]
+[ext_resource path="res://Images/Player/Lifes.png" type="Texture" id=70]
+[ext_resource path="res://Fonts/montserrat_alt/MontserratAlternates-Bold.otf" type="DynamicFontData" id=71]
+[ext_resource path="res://Script/Leaders.gd" type="Script" id=72]
+[ext_resource path="res://Music/bag_raiders2.ogg" type="AudioStream" id=73]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 56.6897, 14.9122 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-Black.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+use_filter = true
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-BoldItalic.otf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+use_filter = true
+font_data = SubResource( 4 )
+
+[sub_resource type="InputEventKey" id=6]
+scancode = 32
+unicode = 1
+echo = true
+
+[sub_resource type="ShortCut" id=7]
+shortcut = SubResource( 6 )
+
+[sub_resource type="Animation" id=8]
+length = 23.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 23 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+use_filter = true
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 50
+use_filter = true
+font_data = SubResource( 12 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 50
+use_filter = true
+font_data = ExtResource( 54 )
+
+[sub_resource type="DynamicFontData" id=15]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=16]
+size = 50
+use_filter = true
+font_data = SubResource( 15 )
+
+[sub_resource type="DynamicFontData" id=17]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=18]
+size = 50
+use_filter = true
+font_data = SubResource( 17 )
+
+[sub_resource type="DynamicFontData" id=19]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=20]
+size = 50
+use_filter = true
+font_data = SubResource( 19 )
+
+[sub_resource type="DynamicFontData" id=21]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-Bold.otf"
+
+[sub_resource type="DynamicFont" id=22]
+size = 20
+use_filter = true
+font_data = SubResource( 21 )
+
+[sub_resource type="InputEventKey" id=23]
+scancode = 80
+
+[sub_resource type="ShortCut" id=24]
+shortcut = SubResource( 23 )
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="DynamicFontData" id=27]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-Black.otf"
+
+[sub_resource type="DynamicFont" id=28]
+size = 34
+use_filter = true
+font_data = SubResource( 27 )
+
+[sub_resource type="DynamicFontData" id=29]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=30]
+size = 50
+use_filter = true
+font_data = SubResource( 29 )
+
+[sub_resource type="InputEventKey" id=31]
+scancode = 32
+
+[sub_resource type="ShortCut" id=32]
+shortcut = SubResource( 31 )
+
+[sub_resource type="DynamicFontData" id=33]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=34]
+size = 50
+use_filter = true
+font_data = SubResource( 33 )
+
+[sub_resource type="InputEventKey" id=35]
+scancode = 16777217
+
+[sub_resource type="ShortCut" id=36]
+shortcut = SubResource( 35 )
+
+[sub_resource type="DynamicFontData" id=37]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=38]
+size = 50
+font_data = SubResource( 37 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 50
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=40]
+size = 50
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=62]
+size = 50
+font_data = ExtResource( 54 )
+
+[sub_resource type="DynamicFontData" id=41]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-Bold.otf"
+
+[sub_resource type="DynamicFont" id=42]
+size = 40
+use_filter = true
+font_data = SubResource( 41 )
+
+[sub_resource type="DynamicFont" id=43]
+size = 50
+use_filter = true
+font_data = ExtResource( 54 )
+
+[sub_resource type="DynamicFontData" id=44]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-ExtraBold.otf"
+
+[sub_resource type="DynamicFont" id=45]
+size = 25
+use_filter = true
+font_data = SubResource( 44 )
+
+[sub_resource type="DynamicFont" id=46]
+size = 50
+font_data = ExtResource( 54 )
+
+[sub_resource type="DynamicFont" id=63]
+size = 40
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=64]
+size = 60
+font_data = ExtResource( 54 )
+
+[sub_resource type="DynamicFontData" id=47]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-Bold.otf"
+
+[sub_resource type="DynamicFont" id=48]
+size = 30
+font_data = SubResource( 47 )
+
+[sub_resource type="DynamicFontData" id=49]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-Bold.otf"
+
+[sub_resource type="DynamicFont" id=50]
+size = 40
+font_data = SubResource( 49 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 30
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=52]
+size = 40
+font_data = ExtResource( 54 )
+
+[sub_resource type="DynamicFont" id=53]
+size = 25
+use_filter = true
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=54]
+size = 15
+use_filter = true
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=55]
+size = 22
+use_filter = true
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=56]
+size = 50
+font_data = ExtResource( 54 )
+
+[sub_resource type="DynamicFont" id=57]
+size = 40
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFont" id=58]
+size = 30
+use_filter = true
+font_data = ExtResource( 71 )
+
+[sub_resource type="DynamicFontData" id=59]
+font_path = "res://Fonts/montserrat_alt/MontserratAlternates-Bold.otf"
+
+[sub_resource type="DynamicFont" id=60]
+size = 50
+use_filter = true
+font_data = SubResource( 59 )
+
+[sub_resource type="Animation" id=61]
+length = 15.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
+
+[node name="Game" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="background_image2" type="Sprite" parent="Background"]
+position = Vector2( 0, 1280 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="background_image" type="Sprite" parent="Background"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="FlyObjects" type="Node2D" parent="."]
+pause_mode = 2
+
+[node name="Saturns" type="Node2D" parent="FlyObjects"]
+editor/display_folded = true
+
+[node name="Sat1" type="Sprite" parent="FlyObjects/Saturns"]
+position = Vector2( 788.472, 315.024 )
+rotation = -2.52822
+scale = Vector2( -0.5, 0.5 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="Sat2" type="Sprite" parent="FlyObjects/Saturns"]
+position = Vector2( -54.3043, 415.951 )
+rotation = -0.887721
+scale = Vector2( -0.5, 0.5625 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="Sat3" type="Sprite" parent="FlyObjects/Saturns"]
+position = Vector2( 367.832, -59.0889 )
+rotation = -0.496595
+scale = Vector2( 0.4, 0.4375 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="Sat4" type="Sprite" parent="FlyObjects/Saturns"]
+position = Vector2( 771.521, 841.894 )
+rotation = 1.69135
+scale = Vector2( 0.4, 0.4375 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="PinkPlanets" type="Node2D" parent="FlyObjects"]
+editor/display_folded = true
+
+[node name="Pink1" type="Sprite" parent="FlyObjects/PinkPlanets"]
+position = Vector2( 759.649, 631.337 )
+rotation = 1.24066
+scale = Vector2( 0.2, 0.176471 )
+texture = ExtResource( 5 )
+script = ExtResource( 4 )
+
+[node name="Pink2" type="Sprite" parent="FlyObjects/PinkPlanets"]
+position = Vector2( -45.9988, 581.375 )
+rotation = -0.707714
+scale = Vector2( 0.25, 0.229947 )
+texture = ExtResource( 5 )
+script = ExtResource( 4 )
+
+[node name="Pink3" type="Sprite" parent="FlyObjects/PinkPlanets"]
+position = Vector2( 780.868, 483.316 )
+rotation = 1.50659
+scale = Vector2( 0.3, 0.283422 )
+texture = ExtResource( 5 )
+script = ExtResource( 4 )
+
+[node name="Cosmonauts" type="Node2D" parent="FlyObjects"]
+editor/display_folded = true
+
+[node name="Cosm1" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 767.731, 944.878 )
+rotation = 1.77259
+scale = Vector2( 0.837614, 0.843833 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Cosm2" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( -67.4016, 821.92 )
+rotation = -2.05014
+scale = Vector2( 1.35378, 1.22974 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Cosm3" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 810.054, 68.866 )
+rotation = 1.98348
+scale = Vector2( 1.16199, -0.963066 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Cosm4" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 791.331, 563.708 )
+rotation = -1.20402
+scale = Vector2( -1.14308, 0.97788 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Cosm5" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( -90.1346, 103.695 )
+rotation = 0.799584
+scale = Vector2( 1.57242, 1.44546 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Cosm6" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 658.552, 1352.93 )
+rotation = -1.50218
+scale = Vector2( -0.269231, 0.260942 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Cosm7" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 190.089, 1322.57 )
+rotation = 2.39139
+scale = Vector2( 0.269231, 0.25 )
+texture = ExtResource( 6 )
+script = ExtResource( 4 )
+
+[node name="Cosm8" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 105.132, -40.3945 )
+rotation = 1.5587
+scale = Vector2( 1.92857, 1.69697 )
+texture = ExtResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cosm9" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 774.3, 195.34 )
+rotation = -0.857738
+scale = Vector2( -1.64286, 0.787879 )
+texture = ExtResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cosm10" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( -39.7278, 1209.82 )
+rotation = 0.692545
+scale = Vector2( 2.64286, 1.09091 )
+texture = ExtResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cosm11" type="Sprite" parent="FlyObjects/Cosmonauts"]
+position = Vector2( 642.045, -53.96 )
+rotation = -2.1466
+scale = Vector2( -2.35714, 2 )
+texture = ExtResource( 7 )
+script = ExtResource( 4 )
+
+[node name="NYAN_CAT" parent="FlyObjects" instance=ExtResource( 8 )]
+position = Vector2( -50, 270 )
+scale = Vector2( 1.28125, 1.28125 )
+script = ExtResource( 9 )
+
+[node name="StartPlank" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 10, 180 )
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="StartPlank"]
+position = Vector2( 350, 940 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartPlank"]
+position = Vector2( 350, 940 )
+shape = SubResource( 1 )
+
+[node name="planks" type="Node2D" parent="."]
+position = Vector2( 10, 0 )
+
+[node name="hearths" type="Node2D" parent="."]
+
+[node name="Start_screen" type="Control" parent="."]
+pause_mode = 2
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Start_screen"]
+editor/display_folded = true
+margin_right = 720.0
+margin_bottom = 1280.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Label" type="Label" parent="Start_screen/ColorRect"]
+margin_top = 380.0
+margin_right = 720.0
+margin_bottom = 455.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.280762, 0.78125, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Нажми для начала"
+align = 1
+valign = 1
+
+[node name="New_version" type="RichTextLabel" parent="Start_screen/ColorRect"]
+visible = false
+margin_left = 420.0
+margin_top = 1240.0
+margin_right = 720.0
+margin_bottom = 1280.0
+custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 0.280762, 0.78125, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[url=\"SomeLink\"]Доступна новая версия[/url]"
+text = "Доступна новая версия"
+scroll_active = false
+script = ExtResource( 12 )
+
+[node name="StartButton" type="TextureButton" parent="Start_screen"]
+pause_mode = 2
+editor/display_folded = true
+margin_left = 90.0
+margin_top = 300.0
+margin_right = 640.0
+margin_bottom = 1180.0
+shortcut = SubResource( 7 )
+script = ExtResource( 13 )
+
+[node name="Start_music" type="AudioStreamPlayer" parent="Start_screen/StartButton"]
+stream = ExtResource( 14 )
+
+[node name="StartSound" type="AnimationPlayer" parent="Start_screen/StartButton/Start_music"]
+anims/soundstart = SubResource( 8 )
+
+[node name="Arrow1" type="Sprite" parent="Start_screen"]
+position = Vector2( 218.161, 1006.15 )
+rotation = 0.784658
+scale = Vector2( 0.355919, -0.358516 )
+texture = ExtResource( 15 )
+
+[node name="Arrow2" type="Sprite" parent="Start_screen"]
+position = Vector2( 505.644, 1011.87 )
+rotation = 2.22229
+scale = Vector2( 0.304414, 0.366549 )
+texture = ExtResource( 15 )
+
+[node name="Player" parent="." instance=ExtResource( 16 )]
+position = Vector2( 360, 1030 )
+
+[node name="End_screen" type="Control" parent="."]
+pause_mode = 2
+editor/display_folded = true
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 17 )
+
+[node name="ColorRect" type="ColorRect" parent="End_screen"]
+pause_mode = 2
+editor/display_folded = true
+margin_right = 720.0
+margin_bottom = 1280.0
+color = Color( 0, 0, 0, 0.613255 )
+
+[node name="Record" type="AnimatedSprite" parent="End_screen/ColorRect"]
+pause_mode = 2
+visible = false
+position = Vector2( 360, 490 )
+scale = Vector2( 0.736746, 0.788732 )
+frames = SubResource( 9 )
+
+[node name="your_score" type="Label" parent="End_screen/ColorRect"]
+margin_top = 200.0
+margin_right = 720.0
+margin_bottom = 291.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Твой результат:"
+align = 1
+valign = 1
+
+[node name="max_score" type="Label" parent="End_screen/ColorRect"]
+margin_top = 340.0
+margin_right = 720.0
+margin_bottom = 421.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Твой рекорд:"
+align = 1
+valign = 1
+
+[node name="NewRecord" type="Label" parent="End_screen/ColorRect"]
+visible = false
+margin_top = 480.0
+margin_right = 720.0
+margin_bottom = 542.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0.385337, 0.800781, 0.269012, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Новый рекорд"
+align = 1
+
+[node name="Retry_label" type="Label" parent="End_screen/ColorRect"]
+margin_top = 600.0
+margin_right = 720.0
+margin_bottom = 651.0
+custom_fonts/font = SubResource( 16 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Заново"
+align = 1
+valign = 1
+
+[node name="Retry" type="TextureButton" parent="End_screen/ColorRect/Retry_label"]
+pause_mode = 2
+margin_left = 250.0
+margin_right = 470.0
+margin_bottom = 60.0
+
+[node name="Highscore_label" type="Label" parent="End_screen/ColorRect"]
+margin_top = 770.0
+margin_right = 720.0
+margin_bottom = 821.0
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Список лидеров"
+align = 1
+valign = 1
+
+[node name="Highscore" type="TextureButton" parent="End_screen/ColorRect/Highscore_label"]
+margin_left = 130.0
+margin_right = 590.0
+margin_bottom = 60.0
+
+[node name="Exit_label" type="Label" parent="End_screen/ColorRect"]
+margin_top = 940.0
+margin_right = 720.0
+margin_bottom = 991.0
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Выйти"
+align = 1
+valign = 1
+
+[node name="Exit" type="TextureButton" parent="End_screen/ColorRect/Exit_label"]
+pause_mode = 2
+margin_left = 260.0
+margin_right = 460.0
+margin_bottom = 60.0
+
+[node name="ShareResult" type="Label" parent="End_screen/ColorRect"]
+pause_mode = 2
+margin_left = 100.0
+margin_top = 1210.0
+margin_right = 620.0
+margin_bottom = 1280.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Timer" type="Timer" parent="End_screen"]
+pause_mode = 2
+
+[node name="GUI" type="Control" parent="."]
+editor/display_folded = true
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="PauseButton" type="TextureButton" parent="GUI"]
+editor/display_folded = true
+margin_left = 640.0
+margin_top = 20.0
+margin_right = 700.0
+margin_bottom = 80.0
+shortcut = SubResource( 24 )
+
+[node name="Icon" type="Sprite" parent="GUI/PauseButton"]
+position = Vector2( 30, 30 )
+scale = Vector2( 0.484375, 0.484375 )
+texture = ExtResource( 55 )
+
+[node name="TouchScreen" type="Control" parent="GUI"]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="RightButt" type="TextureButton" parent="GUI/TouchScreen"]
+pause_mode = 2
+margin_left = 360.0
+margin_top = 130.0
+margin_right = 720.0
+margin_bottom = 1280.0
+script = ExtResource( 56 )
+
+[node name="LeftButt" type="TextureButton" parent="GUI/TouchScreen"]
+pause_mode = 2
+margin_top = 130.0
+margin_right = 360.0
+margin_bottom = 1280.0
+script = ExtResource( 57 )
+
+[node name="TouchHintRight" type="AnimatedSprite" parent="GUI/TouchScreen"]
+position = Vector2( 600, 1100 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 25 )
+
+[node name="TouchHintLeft" type="AnimatedSprite" parent="GUI/TouchScreen"]
+position = Vector2( 140, 1100 )
+rotation = -3.14159
+scale = Vector2( 0.5, -0.5 )
+frames = SubResource( 26 )
+
+[node name="score" type="Label" parent="GUI"]
+editor/display_folded = true
+margin_left = 10.0
+margin_top = 40.0
+margin_right = 150.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 0.992188, 0, 0.837158, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Счёт:"
+
+[node name="NewRecord" type="Sprite" parent="GUI/score"]
+visible = false
+position = Vector2( -14.9941, 10.7011 )
+scale = Vector2( 0.252757, 0.253894 )
+texture = ExtResource( 68 )
+
+[node name="Health" type="TextureProgress" parent="GUI"]
+margin_left = 10.0
+margin_top = 15.0
+margin_right = 110.0
+margin_bottom = 35.0
+max_value = 4.0
+value = 4.0
+rounded = true
+texture_under = ExtResource( 69 )
+texture_progress = ExtResource( 70 )
+nine_patch_stretch = true
+
+[node name="Pause_screen" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="BlackBack" type="ColorRect" parent="Pause_screen"]
+margin_right = 720.0
+margin_bottom = 1280.0
+color = Color( 0, 0, 0, 0.613255 )
+
+[node name="Buttons" type="Control" parent="Pause_screen"]
+pause_mode = 2
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Resume_label" type="Label" parent="Pause_screen/Buttons"]
+editor/display_folded = true
+margin_top = 542.0
+margin_right = 720.0
+margin_bottom = 604.0
+custom_fonts/font = SubResource( 30 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Продолжить"
+align = 1
+
+[node name="Resume" type="TextureButton" parent="Pause_screen/Buttons/Resume_label"]
+pause_mode = 2
+margin_left = 160.0
+margin_right = 560.0
+margin_bottom = 70.0
+shortcut = SubResource( 32 )
+
+[node name="Exit_label" type="Label" parent="Pause_screen/Buttons"]
+editor/display_folded = true
+margin_top = 850.0
+margin_right = 720.0
+margin_bottom = 912.0
+custom_fonts/font = SubResource( 34 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Выйти"
+align = 1
+
+[node name="Exit" type="TextureButton" parent="Pause_screen/Buttons/Exit_label"]
+pause_mode = 2
+margin_left = 250.0
+margin_right = 470.0
+margin_bottom = 60.0
+shortcut = SubResource( 36 )
+
+[node name="SettingsLabel" type="Label" parent="Pause_screen/Buttons"]
+editor/display_folded = true
+margin_top = 410.0
+margin_right = 720.0
+margin_bottom = 472.0
+custom_fonts/font = SubResource( 38 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Настройки"
+align = 1
+
+[node name="Settings" type="TextureButton" parent="Pause_screen/Buttons/SettingsLabel"]
+margin_left = 190.0
+margin_right = 530.0
+margin_bottom = 70.0
+
+[node name="AboutMeLabel" type="Label" parent="Pause_screen/Buttons"]
+editor/display_folded = true
+margin_top = 270.0
+margin_right = 720.0
+margin_bottom = 332.0
+custom_fonts/font = SubResource( 39 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "О разработчике"
+align = 1
+
+[node name="AboutMe" type="TextureButton" parent="Pause_screen/Buttons/AboutMeLabel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 110.0
+margin_top = -62.0
+margin_right = 610.0
+margin_bottom = 8.0
+
+[node name="Change_nick" type="Label" parent="Pause_screen/Buttons"]
+editor/display_folded = true
+visible = false
+margin_left = 160.0
+margin_top = 970.0
+margin_right = 571.0
+margin_bottom = 1032.0
+custom_fonts/font = SubResource( 40 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Изменить ник"
+
+[node name="Change_nick" type="TextureButton" parent="Pause_screen/Buttons/Change_nick"]
+margin_top = 10.0
+margin_right = 410.0
+margin_bottom = 60.0
+
+[node name="CryptoLabel" type="Label" parent="Pause_screen/Buttons"]
+margin_top = 670.0
+margin_right = 720.0
+margin_bottom = 732.0
+custom_fonts/font = SubResource( 62 )
+custom_colors/font_color = Color( 0.780392, 0, 0.658824, 1 )
+text = "Токен"
+align = 1
+valign = 1
+
+[node name="CryptoButton" type="TextureButton" parent="Pause_screen/Buttons/CryptoLabel"]
+margin_left = 270.0
+margin_right = 454.0
+margin_bottom = 60.0
+
+[node name="AboutMe" type="Control" parent="Pause_screen"]
+pause_mode = 2
+editor/display_folded = true
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pause_screen/AboutMe"]
+margin_left = 60.0
+margin_top = 190.0
+margin_right = 660.0
+margin_bottom = 1010.0
+custom_fonts/normal_font = SubResource( 42 )
+custom_colors/default_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/selection_color = Color( 1, 0.980713, 0.691406, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_text = "Developer: Alles Fadeev
+
+Project page:
+https://allespro.github.io
+
+Contacts:
+E-mail: arcy.all@yahoo.com
+Telegram: allespro
+
+I'm from Russia, from city Moscow and I'm student.
+
+Write me letters."
+text = "Developer: Alles Fadeev
+
+Project page:
+https://allespro.github.io
+
+Contacts:
+E-mail: arcy.all@yahoo.com
+Telegram: allespro
+
+I'm from Russia, from city Moscow and I'm student.
+
+Write me letters."
+
+[node name="BackFromAboutMe" type="TextureButton" parent="Pause_screen/AboutMe"]
+pause_mode = 2
+margin_left = 270.0
+margin_top = 1150.0
+margin_right = 450.0
+margin_bottom = 1210.0
+
+[node name="BackFromAboutMe2" type="Label" parent="Pause_screen/AboutMe/BackFromAboutMe"]
+margin_right = 175.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 43 )
+custom_colors/font_color = Color( 0.780392, 0, 0.658824, 1 )
+text = "Назад"
+
+[node name="Settings" type="Control" parent="Pause_screen"]
+editor/display_folded = true
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="BackFromAboutSettings" type="TextureButton" parent="Pause_screen/Settings"]
+pause_mode = 2
+margin_left = 270.0
+margin_top = 1150.0
+margin_right = 450.0
+margin_bottom = 1210.0
+
+[node name="BackFromAboutSettings2" type="Label" parent="Pause_screen/Settings"]
+margin_left = 280.0
+margin_top = 1160.0
+margin_right = 445.0
+margin_bottom = 1211.0
+custom_fonts/font = SubResource( 43 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Назад"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Pause_screen/Settings"]
+margin_left = 60.0
+margin_top = 190.0
+margin_right = 660.0
+margin_bottom = 1010.0
+custom_fonts/normal_font = SubResource( 42 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+custom_colors/selection_color = Color( 1, 0.980713, 0.691406, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_text = "Here is nothing
+Settings will be added soon"
+text = "Here is nothing
+Settings will be added soon"
+
+[node name="VersionLabel" type="Label" parent="Pause_screen"]
+margin_left = 50.0
+margin_top = 1210.0
+margin_right = 90.0
+margin_bottom = 1236.0
+custom_fonts/font = SubResource( 45 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "VERSION"
+
+[node name="Crypto" type="Control" parent="Pause_screen"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="BackFromAboutCrypto" type="TextureButton" parent="Pause_screen/Crypto"]
+editor/display_folded = true
+margin_left = 260.0
+margin_top = 1160.0
+margin_right = 450.0
+margin_bottom = 1210.0
+
+[node name="Label" type="Label" parent="Pause_screen/Crypto/BackFromAboutCrypto"]
+margin_left = 10.0
+margin_top = -10.0
+margin_right = 185.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 46 )
+custom_colors/font_color = Color( 0.780392, 0, 0.658824, 1 )
+text = "Назад"
+
+[node name="About" type="RichTextLabel" parent="Pause_screen/Crypto"]
+margin_left = 30.0
+margin_top = 257.0
+margin_right = 690.0
+margin_bottom = 950.0
+custom_fonts/normal_font = SubResource( 63 )
+custom_colors/default_color = Color( 0.780392, 0, 0.658824, 1 )
+text = "Токен токен"
+
+[node name="Title" type="Label" parent="Pause_screen/Crypto"]
+margin_top = 60.0
+margin_right = 720.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 64 )
+custom_colors/font_color = Color( 0.780392, 0, 0.658824, 1 )
+text = "Токен"
+align = 1
+valign = 1
+
+[node name="NameInput" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="NameInput"]
+editor/display_folded = true
+margin_right = 720.0
+margin_bottom = 1280.0
+color = Color( 0.078125, 0.078125, 0.078125, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NameInput/ColorRect"]
+margin_left = 30.0
+margin_top = 60.0
+margin_right = 680.0
+margin_bottom = 620.0
+custom_fonts/normal_font = SubResource( 48 )
+custom_colors/default_color = Color( 0.78125, 0, 0.65918, 1 )
+bbcode_enabled = true
+bbcode_text = "Тебя приветствует игра Fabenial Jump
+Спасибо за загрузку и установку игры.
+
+Сейчас тебе потребуется ввести ник для подписи своего рекорда при его публикации, это действие нужно выполнить только один раз, ник больше нельзя будет сменить.
+
+Почта будет использована для получения новостей, вводить её не обязательно."
+text = "Тебя приветствует игра Fabenial Jump
+Спасибо за загрузку и установку игры.
+
+Сейчас тебе потребуется ввести ник для подписи своего рекорда при его публикации, это действие нужно выполнить только один раз, ник больше нельзя будет сменить.
+
+Почта будет использована для получения новостей, вводить её не обязательно."
+scroll_active = false
+
+[node name="NikLine" type="LineEdit" parent="NameInput/ColorRect"]
+margin_left = 170.0
+margin_top = 690.0
+margin_right = 540.0
+margin_bottom = 750.0
+hint_tooltip = "nick"
+custom_fonts/font = SubResource( 50 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+align = 1
+max_length = 10
+placeholder_text = "Никнейм"
+
+[node name="EmailLine" type="LineEdit" parent="NameInput/ColorRect"]
+margin_left = 170.0
+margin_top = 820.0
+margin_right = 540.0
+margin_bottom = 880.0
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+align = 1
+max_length = 30
+placeholder_text = "email по желанию"
+
+[node name="ApplyNick" type="TextureButton" parent="NameInput/ColorRect"]
+margin_left = 170.0
+margin_top = 960.0
+margin_right = 540.0
+margin_bottom = 1030.0
+
+[node name="Label" type="Label" parent="NameInput/ColorRect/ApplyNick"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 348.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 52 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Подтвердить"
+align = 1
+valign = 1
+
+[node name="Skip" type="TextureButton" parent="NameInput/ColorRect"]
+margin_left = 260.0
+margin_top = 1190.0
+margin_right = 470.0
+margin_bottom = 1230.0
+
+[node name="Label" type="Label" parent="NameInput/ColorRect/Skip"]
+margin_left = 10.0
+margin_top = -10.0
+margin_right = 196.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 53 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Пропустить"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="NameInput/ColorRect/Skip"]
+margin_left = -20.0
+margin_top = 40.0
+margin_right = 222.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 54 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Смена ника будет возможна"
+
+[node name="FreeOrNot" type="Label" parent="NameInput/ColorRect"]
+visible = false
+margin_left = 170.0
+margin_top = 750.0
+margin_right = 540.0
+margin_bottom = 794.0
+custom_fonts/font = SubResource( 55 )
+custom_colors/font_color = Color( 0.78125, 0, 0.384521, 1 )
+text = "Имя занято, введите другое"
+align = 1
+valign = 1
+
+[node name="Leaders" type="Control" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 72 )
+
+[node name="BlackBack" type="ColorRect" parent="Leaders"]
+editor/display_folded = true
+margin_right = 720.0
+margin_bottom = 1280.0
+color = Color( 0, 0, 0, 0.613255 )
+
+[node name="Label" type="Label" parent="Leaders/BlackBack"]
+margin_left = 140.0
+margin_top = 110.0
+margin_right = 585.0
+margin_bottom = 172.0
+custom_fonts/font = SubResource( 56 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Список лидеров"
+
+[node name="List" type="RichTextLabel" parent="Leaders/BlackBack"]
+margin_left = 80.0
+margin_top = 200.0
+margin_right = 640.0
+margin_bottom = 1050.0
+custom_fonts/normal_font = SubResource( 57 )
+custom_colors/default_color = Color( 0.78125, 0, 0.65918, 1 )
+bbcode_text = "IMAEGG))"
+text = "IMAEGG))"
+
+[node name="YourScore" type="Label" parent="Leaders/BlackBack"]
+margin_left = 90.0
+margin_top = 1070.0
+margin_right = 549.0
+margin_bottom = 1108.0
+custom_fonts/font = SubResource( 58 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Ваш максимальный рекорд"
+
+[node name="Back" type="Label" parent="Leaders/BlackBack"]
+margin_left = 280.0
+margin_top = 1150.0
+margin_right = 445.0
+margin_bottom = 1201.0
+custom_fonts/font = SubResource( 60 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+text = "Назад"
+
+[node name="Back" type="TextureButton" parent="Leaders/BlackBack/Back"]
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 180.0
+margin_bottom = 50.0
+
+[node name="GetLeaders" type="HTTPRequest" parent="Leaders"]
+use_threads = true
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+editor/display_folded = true
+stream = ExtResource( 73 )
+
+[node name="GameMusic" type="AnimationPlayer" parent="GameMusic"]
+anims/GameSound = SubResource( 61 )
+
+[node name="VersionGet" type="HTTPRequest" parent="."]
+pause_mode = 2
+use_threads = true
+
+[node name="ResultSend" type="HTTPRequest" parent="."]
+pause_mode = 2
+use_threads = true
+
+[node name="CheckName" type="HTTPRequest" parent="."]
+pause_mode = 2
+
+[connection signal="pressed" from="Start_screen/StartButton" to="Start_screen/StartButton" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="End_screen/ColorRect/Retry_label/Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="End_screen/ColorRect/Highscore_label/Highscore" to="End_screen" method="_on_Highscore_pressed"]
+[connection signal="pressed" from="End_screen/ColorRect/Exit_label/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="GUI/PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="button_down" from="GUI/TouchScreen/RightButt" to="GUI/TouchScreen/RightButt" method="_on_RightButt_button_down"]
+[connection signal="button_up" from="GUI/TouchScreen/RightButt" to="GUI/TouchScreen/RightButt" method="_on_RightButt_button_up"]
+[connection signal="button_down" from="GUI/TouchScreen/LeftButt" to="GUI/TouchScreen/LeftButt" method="_on_LeftButt_button_down"]
+[connection signal="button_up" from="GUI/TouchScreen/LeftButt" to="GUI/TouchScreen/LeftButt" method="_on_LeftButt_button_up"]
+[connection signal="pressed" from="Pause_screen/Buttons/Resume_label/Resume" to="." method="_on_Resume_pressed"]
+[connection signal="pressed" from="Pause_screen/Buttons/Exit_label/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Pause_screen/Buttons/SettingsLabel/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Pause_screen/Buttons/AboutMeLabel/AboutMe" to="." method="_on_AboutMe_pressed"]
+[connection signal="pressed" from="Pause_screen/Buttons/Change_nick/Change_nick" to="." method="_on_Change_nick_pressed"]
+[connection signal="pressed" from="Pause_screen/Buttons/CryptoLabel/CryptoButton" to="." method="_on_CryptoButton_pressed"]
+[connection signal="pressed" from="Pause_screen/AboutMe/BackFromAboutMe" to="." method="_on_BackFromAboutMe_pressed"]
+[connection signal="pressed" from="Pause_screen/Settings/BackFromAboutSettings" to="." method="_on_BackFromAboutSettings_pressed"]
+[connection signal="pressed" from="Pause_screen/Crypto/BackFromAboutCrypto" to="." method="_on_BackFromAboutCrypto_pressed"]
+[connection signal="pressed" from="NameInput/ColorRect/ApplyNick" to="." method="_on_ApplyNick_pressed"]
+[connection signal="pressed" from="NameInput/ColorRect/Skip" to="." method="_on_Skip_pressed"]
+[connection signal="pressed" from="Leaders/BlackBack/Back/Back" to="Leaders" method="_on_Back_pressed"]
+[connection signal="request_completed" from="Leaders/GetLeaders" to="Leaders" method="_on_GetLeaders_request_completed"]
+[connection signal="request_completed" from="VersionGet" to="." method="_on_VersionGet_request_completed"]
+[connection signal="request_completed" from="CheckName" to="." method="_on_CheckName_request_completed"]

@@ -1,0 +1,135 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Script/Player.gd" type="Script" id=1]
+[ext_resource path="res://Images/Player/player.png" type="Texture" id=2]
+[ext_resource path="res://Music/Jumper-sound.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Images/UI/HintArrow.png" type="Texture" id=4]
+[ext_resource path="res://Script/HintArrow.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 4.18959, 0.751375 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "Blob"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath("Blob")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "play"
+}, {
+"args": [  ],
+"method": "stop"
+} ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.3286, 26.9252 )
+
+[node name="Player" type="Area2D" groups=[
+"player",
+]]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="PlayerBody" type="KinematicBody2D" parent="." index="0"]
+
+scale = Vector2( 2.5, 2.5 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="PlayerBody" index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="JumpArea" type="CollisionShape2D" parent="PlayerBody" index="1"]
+
+position = Vector2( 0, 9.75792 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="JumpArea2D" type="Area2D" parent="PlayerBody" index="2" groups=[
+"foot",
+]]
+
+position = Vector2( 0.00293126, 2.36782 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="JumpArea" type="CollisionShape2D" parent="PlayerBody/JumpArea2D" index="0"]
+
+position = Vector2( 0.0198692, 8.68031 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Blob" type="AudioStreamPlayer2D" parent="PlayerBody" index="3"]
+
+scale = Vector2( 0.4, 0.4 )
+stream = ExtResource( 3 )
+volume_db = 24.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="BlobPlay" type="AnimationPlayer" parent="PlayerBody" index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Blob = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Area" type="CollisionShape2D" parent="." index="1" groups=[
+"player",
+]]
+
+position = Vector2( -0.125868, -1.60579 )
+scale = Vector2( 1, 0.93785 )
+shape = SubResource( 3 )
+
+[node name="HintArrow" type="Sprite" parent="." index="2"]
+
+visible = false
+position = Vector2( 32, -11 )
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 5 )
+_sections_unfolded = [ "Offset" ]
+
+[connection signal="area_entered" from="PlayerBody/JumpArea2D" to="PlayerBody" method="_on_JumpArea2D_area_entered"]
+
+
