@@ -7,4 +7,4 @@ One of godot projects
 **Fabenial jump** is a remake all of the known game "Doodle jump" for computers. I want to make this game cheerful thanks to ridiculous effects and music.
 If you want add something, add issue.
 
-[![Download Fabenial-jump](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/fabenial-jump/files/)
+[![Download Fabenial-jump](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/fabenial-jump/files/latest/download)
