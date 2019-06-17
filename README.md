@@ -1,7 +1,7 @@
 # Fabenial-jump
 [![Download Fabenial-jump](https://img.shields.io/sourceforge/dt/fabenial-jump.svg)](https://sourceforge.net/projects/fabenial-jump/files/latest/download)
 
-One of godot projects
+One of my Godot games
 **My best game!**
 
 ![screenshot of sample](https://github.com/Allespro/Fabenial-jump/blob/master/Pictures/img.png)
