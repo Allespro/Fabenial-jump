@@ -20,7 +20,7 @@ func _physics_process(delta):
 			POSX = -POSX
 		if position.x < -100:
 			POSX = -POSX
-		if position.y > 1180:
+		if position.y > 1380:
 			POSY = -POSY
 		if position.y < -100:
 			POSY = -POSY
