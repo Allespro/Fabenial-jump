@@ -54,6 +54,7 @@ var network = false
 
 var ValidName = false
 
+var server_addres = ''
 
 
 func _ready():
@@ -67,6 +68,7 @@ func _ready():
 	playername = fsp.get_as_text()
 	fsp.close()
 	$VersionGet.request("https://allespro.github.io/current-version")
+	$GetServerAddres.request("https://raw.githubusercontent.com/Allespro/allespro.github.io/master/rank-server")
 	get_tree().paused = true
 
 
@@ -74,13 +76,12 @@ func savename(data):
 	fsp.open(playernamedata, File.WRITE)
 	fsp.store_string(data)
 	fsp.close()
-	print('saved')
+
 	
 func savegame():
 	fs.open(gamedata, File.WRITE)
 	fs.store_64(score)
 	fs.close()
-	print('saved')
 
 func _physics_process(delta):
 	$Background/background_image.position.y += SPEED * delta
@@ -223,7 +224,7 @@ func send_score(player, score):
 	var player_send = str(player)
 	var score_send = str(score)
 	#var max_send = str(max_score)
-	$ResultSend.request('https://globalbit.ru/FabenialJump/ScriptScore.php?score=' + player_send + ":" + score_send)
+	$ResultSend.request('https://' + server_addres + '/FabenialJump/ScriptScore.php?score=' + player_send + ":" + score_send)
 
 
 func _on_Skip_pressed():
@@ -236,7 +237,7 @@ func _on_Skip_pressed():
 func _on_ApplyNick_pressed():
 	var nameinput = $NameInput/ColorRect/NikLine.get_text()
 	if(nameinput != ''):
-		$CheckName.request('https://globalbit.ru/FabenialJump/CheckName.php?name=' + nameinput)
+		$CheckName.request('https://' + server_addres + '/FabenialJump/CheckName.php?name=' + nameinput)
 
 
 func _on_Change_nick_pressed():
@@ -247,11 +248,9 @@ func _on_CheckName_request_completed(result, response_code, headers, body):
 	var nameinput = $NameInput/ColorRect/NikLine.get_text()
 	var email = $NameInput/ColorRect/EmailLine.get_text()
 	if(Valid  == "false\n"):
-		print("YouCant")
 		$NameInput/ColorRect/FreeOrNot.show()
 	if(Valid  == "true\n"):
-		print("YouCan")
-		$ResultSend.request('https://globalbit.ru/FabenialJump/SaveEmail.php?string=' + nameinput + ":" + email + '&name=' + nameinput)
+		$ResultSend.request('https://' + server_addres + '/FabenialJump/SaveEmail.php?string=' + nameinput + ":" + email + '&name=' + nameinput)
 		$NameInput/ColorRect/FreeOrNot.hide()
 		send_score(nameinput, max_score)
 		savename(nameinput)
@@ -261,5 +260,8 @@ func _on_CheckName_request_completed(result, response_code, headers, body):
 		$NameInput.hide()
 	
 
-
-
+func _on_GetServerAddres_request_completed(result, response_code, headers, body):
+	if (response_code == 200):
+		server_addres = body.get_string_from_utf8().replace('\n', '')
+	else:
+		server_addres = 'globalbit.ru'

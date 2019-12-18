@@ -2,7 +2,8 @@ extends Control
 
 func check_network():
 	$ColorRect/ShareResult.text = ''
-	$"../VersionGet".request("https://globalbit.ru/FabenialJump/HighScore")
+	
+	$"../VersionGet".request("https://" + $"../".server_addres + "/FabenialJump/HighScore")
 	var t = Timer.new() 		# Create a new Timer node
 	t.set_wait_time(0.4) 		# Set the wait time
 	add_child(t)			# Add it to the node tree as the direct child
