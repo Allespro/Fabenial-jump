@@ -3,12 +3,12 @@ extends Control
 func check_network():
 	$ColorRect/ShareResult.text = ''
 	
-	$"../VersionGet".request("https://" + $"../".server_addres + "/FabenialJump/HighScore")
-	var t = Timer.new() 		# Create a new Timer node
-	t.set_wait_time(0.4) 		# Set the wait time
-	add_child(t)			# Add it to the node tree as the direct child
-	t.start()			# Start it
-	yield(t, "timeout")			# Start it
+	$"../VersionGet".request($"../".server_addres + "HighScore")
+	var t = Timer.new() 
+	t.set_wait_time(0.4) 
+	add_child(t)
+	t.start()	
+	yield(t, "timeout")	
 	if ($"../".response == 200):
 		$ColorRect/ShareResult.add_color_override("font_color", Color("25ff00"))
 		$ColorRect/ShareResult.text = 'Сервер доступен, результат был отправлен'

@@ -1,63 +1,38 @@
 extends Node
 
-const SPEED = 120
+const SPEED 	= 120
 
 var back_size
-
-var screenW= 0
-
-var timer = 0
-
-var score = 0
-
-var score_time = 0
-
-var max_score = 0
-
-var need_save = false
-
-var gamedata = 'user://gamedata-test.save'
-
-var playernamedata = 'user://playerdata.save'
-
-var playername = ''
-
-var CanChangeNick = false
-
-var fs = File.new()
-
-var fsp = File.new()
-
-var GAME = true
-
-var SAVE = 0
-
-var RECORD = ''
-
-var AnimRecord = false
-
-var on_floor = false
-
-var planke = preload("res://Scenes/Plank.tscn")
-
-var hearthe = preload("res://Scenes/Health.tscn")
-
-var spawnhearth = 0
-
-var VERSION = '1.34.7'
-
 var CURRENT_VERSION
 
-var response = 0
+var screenW			= 0
+var timer			= 0
+var score			= 0
+var score_time		= 0
+var max_score		= 0
+var need_save		= false
+var gamedata 		= 'user://gamedata-test.save'
+var playernamedata	= 'user://playerdata.save'
+var playername		= ''
+var CanChangeNick 	= false
+var fs				= File.new()
+var fsp				= File.new()
+var GAME 			= true
+var SAVE			= 0
+var RECORD			= ''
+var AnimRecord		= false
+var on_floor		= false
+var planke			= preload("res://Scenes/Plank.tscn")
+var hearthe			= preload("res://Scenes/Health.tscn")
+var spawnhearth		= 0
+var VERSION			= '1.34.7'
+var response		= 0
+var network			= false
+var ValidName		= false
+var server_addres	= ''
 
-var network = false
 
-var ValidName = false
-
-var server_addres = ''
-
-
-func _ready():
+func _ready():	
 	$Pause_screen/VersionLabel.text = 'Версия ' + VERSION
 	back_size = $Background/background_image.texture.get_size()
 	screenW = get_viewport().get_visible_rect().size.y
@@ -68,16 +43,14 @@ func _ready():
 	playername = fsp.get_as_text()
 	fsp.close()
 	$VersionGet.request("https://allespro.github.io/current-version")
-	$GetServerAddres.request("https://raw.githubusercontent.com/Allespro/allespro.github.io/master/rank-server")
+	$GetServerAddres.request("https://allespro.github.io/rank-server")
 	get_tree().paused = true
-
 
 func savename(data):
 	fsp.open(playernamedata, File.WRITE)
 	fsp.store_string(data)
 	fsp.close()
 
-	
 func savegame():
 	fs.open(gamedata, File.WRITE)
 	fs.store_64(score)
@@ -117,7 +90,6 @@ func _physics_process(delta):
 	$End_screen/ColorRect/your_score.text = 'Твой результат: ' + str(score)
 	
 	if (max_score < score):
-		#$GUI/score/NewRecord.show()
 		RECORD = '!'
 		AnimRecord = true
 		
@@ -150,7 +122,6 @@ func _on_Retry_pressed():
 	$Player/PlayerBody.life = true
 	RECORD = ''
 	AnimRecord = false
-	#$GUI/score/NewRecord.hide()
 	if (need_save == true):
 		savegame()
 	SAVE = 0
@@ -173,12 +144,9 @@ func _on_BackFromAboutMe_pressed():
 	$Pause_screen/Buttons.show()
 	$Pause_screen/AboutMe.hide()
 
-
 func _on_AboutMe_pressed():
 	$Pause_screen/Buttons.hide()
 	$Pause_screen/AboutMe.show()
-
-
 
 func _on_BackFromAboutSettings_pressed():
 	$Pause_screen/Buttons.show()
@@ -187,8 +155,6 @@ func _on_BackFromAboutSettings_pressed():
 func _on_Settings_pressed():
 	$Pause_screen/Buttons.hide()
 	$Pause_screen/Settings.show()
-	
-
 
 func _on_CryptoButton_pressed():
 	$Pause_screen/Buttons.hide()
@@ -215,16 +181,13 @@ func _on_VersionGet_request_completed(result, response_code, headers, body):
 		network = true
 		$Start_screen/ColorRect/New_version.show()
 		
-		
 func send_score(player, score):
-	#var headers=[
-	#    "User-Agent: Pirulo/1.0 (Godot)",
-	#    "Accept: */*"
-	#]
 	var player_send = str(player)
 	var score_send = str(score)
+	var query = player_send + ':' + score_send
+	var headers = ["Content-Type: application/json"]
 	#var max_send = str(max_score)
-	$ResultSend.request('https://' + server_addres + '/FabenialJump/ScriptScore.php?score=' + player_send + ":" + score_send)
+	$ResultSend.request(server_addres + 'ScriptScore.php', headers, true, HTTPClient.METHOD_POST, query)
 
 
 func _on_Skip_pressed():
@@ -233,12 +196,11 @@ func _on_Skip_pressed():
 	$Pause_screen/Buttons/Change_nick.show()
 	$NameInput.hide()
 
-
 func _on_ApplyNick_pressed():
 	var nameinput = $NameInput/ColorRect/NikLine.get_text()
+	var passinput = $NameInput/ColorRect/NikPassword.get_text()
 	if(nameinput != ''):
-		$CheckName.request('https://' + server_addres + '/FabenialJump/CheckName.php?name=' + nameinput)
-
+		$CheckName.request(server_addres + 'CheckName.php?name=' + nameinput)
 
 func _on_Change_nick_pressed():
 	$NameInput.show()
@@ -250,7 +212,7 @@ func _on_CheckName_request_completed(result, response_code, headers, body):
 	if(Valid  == "false\n"):
 		$NameInput/ColorRect/FreeOrNot.show()
 	if(Valid  == "true\n"):
-		$ResultSend.request('https://' + server_addres + '/FabenialJump/SaveEmail.php?string=' + nameinput + ":" + email + '&name=' + nameinput)
+		$ResultSend.request(server_addres + 'SaveEmail.php?string=' + nameinput + ":" + email + '&name=' + nameinput)
 		$NameInput/ColorRect/FreeOrNot.hide()
 		send_score(nameinput, max_score)
 		savename(nameinput)
@@ -258,10 +220,9 @@ func _on_CheckName_request_completed(result, response_code, headers, body):
 		CanChangeNick = false
 		$Pause_screen/Buttons/Change_nick.hide()
 		$NameInput.hide()
-	
 
 func _on_GetServerAddres_request_completed(result, response_code, headers, body):
 	if (response_code == 200):
 		server_addres = body.get_string_from_utf8().replace('\n', '')
 	else:
-		server_addres = 'globalbit.ru'
+		server_addres = 'https://globalbit.ru/FabenialJump/'

@@ -22,7 +22,6 @@ func _ready():
 	if (LIFES != 4):
 		need_health = true
 
-
 func _physics_process(delta):
 	if (LIFES == 4):
 		need_health = false
@@ -34,7 +33,6 @@ func _physics_process(delta):
 		vel.x = SPEED
 	else:
 		vel.x = 0
-	
 	vel.y += GRAV
 	if is_on_floor():
 		vel.y = -JUMP;
@@ -71,8 +69,6 @@ func _physics_process(delta):
 		$"../../Start_screen/StartButton/Start_music".stop()
 		$"../../GameMusic".stop()
 		$"../../GUI".hide()
-		#if ($"../../".score < $"../../".max_score):
-			#$"../../".savegame()
 	
 	if (protected == true):
 		protcettimer += delta
@@ -88,7 +84,6 @@ func _physics_process(delta):
 
 func _on_JumpArea2D_area_entered(area):
 	var groups = area.get_groups()
-	#print(groups)
 	if(groups.has("jumper")):
 		JUMP = 1000
 		$Audio/BlobPlay.play("Blob")
@@ -97,7 +92,6 @@ func _on_JumpArea2D_area_entered(area):
 
 func _on_PlayerArea2D_area_entered(area):
 	var getgroups = area.get_groups()
-	#print(getgroups)
 	if(getgroups.has("bad") && protected == false):
 		need_health = true
 		LIFES -= 1
@@ -115,5 +109,4 @@ func _on_PlayerArea2D_area_entered(area):
 		if (LIFES > 4):
 			need_health = false
 			LIFES = 4
-			#print(LIFES)
 		$"../../GUI/Health".set_value(LIFES)

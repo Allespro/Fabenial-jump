@@ -1035,50 +1035,60 @@ valign = 1
 
 [node name="NameInput" type="Control" parent="."]
 pause_mode = 2
-editor/display_folded = true
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="ColorRect" type="ColorRect" parent="NameInput"]
-editor/display_folded = true
 margin_right = 720.0
 margin_bottom = 1280.0
 color = Color( 0.078125, 0.078125, 0.078125, 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="NameInput/ColorRect"]
 margin_left = 30.0
-margin_top = 60.0
+margin_top = 34.0
 margin_right = 680.0
-margin_bottom = 620.0
+margin_bottom = 660.0
 custom_fonts/normal_font = SubResource( 50 )
 custom_colors/default_color = Color( 0.78125, 0, 0.65918, 1 )
 bbcode_enabled = true
 bbcode_text = "Тебя приветствует игра Fabenial Jump
 Спасибо за загрузку и установку игры.
 
-Сейчас тебе потребуется ввести ник для подписи своего рекорда при его публикации, это действие нужно выполнить только один раз, ник больше нельзя будет сменить.
+Сейчас тебе потребуется ввести ник для подписи своего рекорда при его публикации, это действие нужно выполнить только один раз, ник больше нельзя будет сменить. Если Вы новый пользователь, то придумайте пароль.
 
 Почта будет использована для получения новостей, вводить её не обязательно."
 text = "Тебя приветствует игра Fabenial Jump
 Спасибо за загрузку и установку игры.
 
-Сейчас тебе потребуется ввести ник для подписи своего рекорда при его публикации, это действие нужно выполнить только один раз, ник больше нельзя будет сменить.
+Сейчас тебе потребуется ввести ник для подписи своего рекорда при его публикации, это действие нужно выполнить только один раз, ник больше нельзя будет сменить. Если Вы новый пользователь, то придумайте пароль.
 
 Почта будет использована для получения новостей, вводить её не обязательно."
 scroll_active = false
 
 [node name="NikLine" type="LineEdit" parent="NameInput/ColorRect"]
 margin_left = 170.0
-margin_top = 690.0
+margin_top = 670.0
 margin_right = 540.0
-margin_bottom = 750.0
+margin_bottom = 730.0
 hint_tooltip = "nick"
 custom_fonts/font = SubResource( 52 )
 custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
 align = 1
 max_length = 10
 placeholder_text = "Никнейм"
+
+[node name="NikPassword" type="LineEdit" parent="NameInput/ColorRect"]
+margin_left = 170.0
+margin_top = 745.0
+margin_right = 540.0
+margin_bottom = 805.0
+hint_tooltip = "nick"
+custom_fonts/font = SubResource( 52 )
+custom_colors/font_color = Color( 0.78125, 0, 0.65918, 1 )
+align = 1
+max_length = 10
+placeholder_text = "Пароль"
 
 [node name="EmailLine" type="LineEdit" parent="NameInput/ColorRect"]
 margin_left = 170.0

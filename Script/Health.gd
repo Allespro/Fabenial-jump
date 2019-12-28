@@ -11,7 +11,6 @@ func _physics_process(delta):
 	position.y += 1.3
 	if position.y > 1281:
 		queue_free()
-	
 
 func _on_HealthArea_area_entered(area):
 	var groups = area.get_groups()
