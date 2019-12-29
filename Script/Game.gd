@@ -184,10 +184,11 @@ func _on_VersionGet_request_completed(result, response_code, headers, body):
 func send_score(player, score):
 	var player_send = str(player)
 	var score_send = str(score)
-	var query = player_send + ':' + score_send
+	var d = {"name": player_send, "score": score_send}
+	var query = JSON.print(d)
 	var headers = ["Content-Type: application/json"]
 	#var max_send = str(max_score)
-	$ResultSend.request(server_addres + 'ScriptScore.php', headers, true, HTTPClient.METHOD_POST, query)
+	$ResultSend.request(server_addres + 'ScriptScore.php', headers, false, HTTPClient.METHOD_POST, query)
 
 
 func _on_Skip_pressed():
@@ -199,8 +200,12 @@ func _on_Skip_pressed():
 func _on_ApplyNick_pressed():
 	var nameinput = $NameInput/ColorRect/NikLine.get_text()
 	var passinput = $NameInput/ColorRect/NikPassword.get_text()
+	var email = $NameInput/ColorRect/EmailLine.get_text()
+	var d = {"name": nameinput, "password": passinput, "email": email}
+	var query = JSON.print(d)
+	var headers = ["Content-Type: application/json"]
 	if(nameinput != ''):
-		$CheckName.request(server_addres + 'CheckName.php?name=' + nameinput)
+		$CheckName.request(server_addres + 'CheckName.php', headers, false, HTTPClient.METHOD_POST, query)
 
 func _on_Change_nick_pressed():
 	$NameInput.show()
@@ -208,11 +213,9 @@ func _on_Change_nick_pressed():
 func _on_CheckName_request_completed(result, response_code, headers, body):
 	var Valid = body.get_string_from_utf8()
 	var nameinput = $NameInput/ColorRect/NikLine.get_text()
-	var email = $NameInput/ColorRect/EmailLine.get_text()
 	if(Valid  == "false\n"):
 		$NameInput/ColorRect/FreeOrNot.show()
 	if(Valid  == "true\n"):
-		$ResultSend.request(server_addres + 'SaveEmail.php?string=' + nameinput + ":" + email + '&name=' + nameinput)
 		$NameInput/ColorRect/FreeOrNot.hide()
 		send_score(nameinput, max_score)
 		savename(nameinput)

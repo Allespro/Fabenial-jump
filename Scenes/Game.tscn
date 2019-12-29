@@ -1158,7 +1158,6 @@ valign = 1
 
 [node name="Leaders" type="Control" parent="."]
 pause_mode = 2
-editor/display_folded = true
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
