@@ -32,7 +32,7 @@ var ValidName		= false
 var server_addres	= ''
 
 
-func _ready():	
+func _ready():
 	$Pause_screen/VersionLabel.text = 'Версия ' + VERSION
 	back_size = $Background/background_image.texture.get_size()
 	screenW = get_viewport().get_visible_rect().size.y
@@ -199,7 +199,7 @@ func _on_Skip_pressed():
 
 func _on_ApplyNick_pressed():
 	var nameinput = $NameInput/ColorRect/NikLine.get_text()
-	var passinput = $NameInput/ColorRect/NikPassword.get_text()
+	var passinput = $NameInput/ColorRect/NikPassword.get_text().md5_text()
 	var email = $NameInput/ColorRect/EmailLine.get_text()
 	var d = {"name": nameinput, "password": passinput, "email": email}
 	var query = JSON.print(d)
